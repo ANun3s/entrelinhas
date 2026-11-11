@@ -1,0 +1,30 @@
+export const paintings = [
+  {
+    id: 'redencao-de-cam',
+    title: 'A Redenção de Cam',
+    artist: 'Modesto Brocos',
+    year: '1895',
+    image: '/paintings/redencao-de-cam.jpg',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Modesto_Brocos_-_Reden%C3%A7%C3%A3o_de_C%C3%A3_(cropped).jpg',
+    criticalSource: 'https://revistas.ufac.br/index.php/RFIR/article/view/7148',
+    description: 'Pintura do pós-abolição que se tornou referência nas discussões sobre a ideologia racista do branqueamento no Brasil.',
+  },
+  {
+    id: 'batalha-do-avai',
+    title: 'A Batalha do Avaí',
+    artist: 'Pedro Américo',
+    year: 'c. 1877',
+    image: '/paintings/batalha-do-avai.jpg',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Pedro_Am%C3%A9rico_-_Batalha_do_Ava%C3%AD.jpg',
+    description: 'Cena monumental ligada à Guerra do Paraguai, tema do relato de campanha de Visconde de Taunay.',
+  },
+  {
+    id: 'independencia-ou-morte',
+    title: 'Independência ou Morte',
+    artist: 'Pedro Américo',
+    year: '1888',
+    image: '/paintings/independencia-ou-morte.jpg',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Pedro_Am%C3%A9rico_-_Independ%C3%AAncia_ou_Morte_-_Google_Art_Project.jpg',
+    description: 'A tela de Pedro Américo representa a proclamação da Independência às margens do Ipiranga.',
+  },
+];
