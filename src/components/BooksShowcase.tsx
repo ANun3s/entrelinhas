@@ -1702,14 +1702,18 @@ export function BooksShowcase({
         <button className="ink-button" onClick={() => selectedCfg && onRead?.(selectedCfg)}>Ler livro <span>↗</span></button>
         <p className="detail-hint">Arraste o livro para vê-lo de outro ângulo.</p>
       </div>}
+      <nav className={`carousel-sides ${!isHero ? 'hidden' : ''}`} aria-label="Navegar pelos livros" inert={!isHero}>
+        <button className="book-carousel-arrow" onClick={() => shiftCarouselRef.current(-1)} aria-label="Livros anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3"><path d="M20 12H4m6-6-6 6 6 6" /></svg></button>
+        <button className="book-carousel-arrow" onClick={() => shiftCarouselRef.current(1)} aria-label="Próximos livros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3"><path d="M4 12h16m-6-6 6 6-6 6" /></svg></button>
+      </nav>
       <div className={`hero-bottom ${!isHero ? 'hidden' : ''}`} aria-hidden={!isHero} inert={!isHero}>
         <p className="interaction-note"><span>✳</span> Uma pequena biblioteca.<br /> Um convite a demorar.</p>
         <div className="book-carousel-controls" aria-label="Navegar pelo carrossel de livros">
-          <button className="book-carousel-arrow" type="button" onClick={() => shiftCarouselRef.current(-1)} aria-label="Livros anteriores">←</button>
+
           <div className="book-selectors" aria-label="Escolher um livro">
             {books.map((book, i) => <button key={book.id} onClick={() => openBookRef.current(book.id)} aria-label={`Abrir ${book.title}`}><span>{String(i + 1).padStart(2, '0')}</span>{book.title}<span>↗</span></button>)}
           </div>
-          <button className="book-carousel-arrow" type="button" onClick={() => shiftCarouselRef.current(1)} aria-label="Próximos livros">→</button>
+
         </div>
         <a className="scroll-note" href="#acervo">EXPLORE O ACERVO <span>↓</span></a>
       </div>

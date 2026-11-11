@@ -513,6 +513,7 @@ const PaperCrumple = ({
       c = new THREE.Vector3();
     const weights = new THREE.Vector3(1, 0, 0);
     let gripIndices = [Math.floor(count / 2), 0, 0];
+    let originX = 0, originY = 0;
     let viewportWidth = 1,
       viewportHeight = 1,
       scale = paperWidth;
@@ -648,6 +649,9 @@ const PaperCrumple = ({
       for (const s of springs)
         moving = advance(s, dt, s === amount || s === memory ? duration : 0.42, reduceMotion || keyboard) || moving;
       peak = Math.max(peak, amount.value);
+      const origin = root.getBoundingClientRect();
+      originX = origin.left + origin.width / 2 - viewportWidth / 2;
+      originY = viewportHeight / 2 - origin.top - origin.height / 2;
       deform();
       sheet.rotation.set(tiltX.value, tiltY.value, baseRotation);
       if (held && !keyboard && opts.draggable) {
@@ -661,12 +665,12 @@ const PaperCrumple = ({
         plane.constant = -anchor.z;
         setPointer(pointerX, pointerY);
         if (raycaster.ray.intersectPlane(plane, world)) {
-          posX.value = posX.target = world.x - anchor.x;
-          posY.value = posY.target = world.y - anchor.y;
+          posX.value = posX.target = world.x - anchor.x - originX;
+          posY.value = posY.target = world.y - anchor.y - originY;
           posX.velocity = posY.velocity = 0;
         }
       }
-      sheet.position.set(posX.value, posY.value, 0);
+      sheet.position.set(posX.value + originX, posY.value + originY, 0);
       sheet.updateMatrixWorld(true);
       const shadowBounds = geometry.boundingBox;
       if (shadowBounds) {
@@ -692,11 +696,11 @@ const PaperCrumple = ({
     }
     function resize() {
       const rect = root.getBoundingClientRect();
-      viewportWidth = Math.max(1, rect.width);
-      viewportHeight = Math.max(1, rect.height);
+      viewportWidth = window.innerWidth;
+      viewportHeight = window.innerHeight;
       scale =
         paperWidth *
-        Math.min(1, Math.max(1, viewportWidth - 48) / paperWidth, Math.max(1, viewportHeight - 48) / paperHeight);
+        Math.min(1, Math.max(1, rect.width - 24) / paperWidth, Math.max(1, rect.height - 48) / paperHeight);
       sheet.scale.setScalar(scale);
       camera.aspect = viewportWidth / viewportHeight;
       camera.position.z = viewportHeight / (2 * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)));
@@ -799,8 +803,8 @@ const PaperCrumple = ({
     function pointerDown(event) {
       if (!ready || options.current.disabled || held || event.button !== 0 || !event.isPrimary) return;
       const rect = root.getBoundingClientRect();
-      pointerX = lastX = event.clientX - rect.left;
-      pointerY = lastY = event.clientY - rect.top;
+      pointerX = lastX = event.clientX;
+      pointerY = lastY = event.clientY;
       setPointer(pointerX, pointerY);
       sheet.updateMatrixWorld(true);
       const intersection = raycaster.intersectObjects([front, back], false)[0];
@@ -826,8 +830,8 @@ const PaperCrumple = ({
       if (!held || event.pointerId !== pointerId || !options.current.draggable) return;
       const rect = root.getBoundingClientRect();
       const now = performance.now();
-      const x = event.clientX - rect.left,
-        y = event.clientY - rect.top;
+      const x = event.clientX,
+        y = event.clientY;
       const dt = Math.max(0.008, (now - lastMove) / 1000);
       speedX = (x - lastX) / dt;
       speedY = (y - lastY) / dt;
@@ -934,6 +938,8 @@ const PaperCrumple = ({
     hit.addEventListener('keyup', keyUp);
     hit.addEventListener('blur', blur);
     window.addEventListener('blur', cancel);
+    window.addEventListener('scroll', wake, { passive: true });
+    window.addEventListener('resize', resize);
     document.addEventListener('visibilitychange', visibility);
     media.addEventListener('change', motionChange);
     canvas.addEventListener('webglcontextlost', loseContext);
@@ -941,7 +947,9 @@ const PaperCrumple = ({
     const observer = new ResizeObserver(resize);
     observer.observe(root);
     const intersectionObserver = new IntersectionObserver(entries => {
-      inView = entries[0].isIntersecting;
+      inView = entries[0].isIntersecting || held;
+      canvas.style.visibility = inView ? 'visible' : 'hidden';
+      hit.style.visibility = inView ? 'visible' : 'hidden';
       lastTime = 0;
       if (!inView) cancel();
       else wake();
@@ -1027,6 +1035,8 @@ const PaperCrumple = ({
       hit.removeEventListener('keyup', keyUp);
       hit.removeEventListener('blur', blur);
       window.removeEventListener('blur', cancel);
+      window.removeEventListener('scroll', wake);
+      window.removeEventListener('resize', resize);
       document.removeEventListener('visibilitychange', visibility);
       media.removeEventListener('change', motionChange);
       canvas.removeEventListener('webglcontextlost', loseContext);

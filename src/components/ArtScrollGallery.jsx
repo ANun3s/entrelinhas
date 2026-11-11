@@ -21,7 +21,7 @@ export default function ArtScrollGallery() {
           <p className="eyebrow">PINTURA · HISTÓRIA · LEITURA</p>
           <h2 id="art-heading">O passado<br />ganha <em>cor.</em></h2>
         </div>
-        <p>Escolha uma obra e role a página: a imagem se desfaz para revelar a próxima, como na animação do caderno que você enviou.</p>
+        <p>Uma pequena galeria de outros tempos. Escolha uma pintura e percorra suas camadas: a cada movimento, uma nova história se revela.</p>
       </div>
 
       <div className="painting-options" role="group" aria-label="Escolher a pintura inicial da animação">
