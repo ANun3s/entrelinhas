@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="400" viewBox="0 0 320 400">
+  <defs>
+    <linearGradient id="sheet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#faf6ec"/>
+      <stop offset="1" stop-color="#eee5d3"/>
+    </linearGradient>
+    <linearGradient id="crease" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8e7556" stop-opacity=".10"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#8e7556" stop-opacity=".08"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="400" fill="url(#sheet)"/>
+  <rect x="13" y="13" width="294" height="374" fill="none" stroke="#9f8767" stroke-opacity=".42"/>
+  <path d="M24 26h272M24 374h272" stroke="#9f8767" stroke-opacity=".38"/>
+  <text x="28" y="48" fill="#715843" font-family="Courier New, monospace" font-size="8" letter-spacing="1.1">ENTRELINHAS · UMA CARTA AO LEITOR</text>
+  <text x="28" y="83" fill="#522b2e" font-family="Georgia, serif" font-size="18">O tempo passa.</text>
+  <text x="28" y="106" fill="#522b2e" font-family="Georgia, serif" font-size="18" font-style="italic">As histórias ficam.</text>
+  <path d="M28 121h264" stroke="#9f8767" stroke-opacity=".42"/>
+  <g fill="#4c3b34" font-family="Courier New, monospace" font-size="10.2" letter-spacing=".15">
+    <text x="28" y="149">Acreditamos nos livros que</text>
+    <text x="28" y="165">ganham orelhas, nas páginas</text>
+    <text x="28" y="181">que carregam marcas e nas</text>
+    <text x="28" y="197">palavras que encontram a gente</text>
+    <text x="28" y="213">na hora certa.</text>
+    <text x="28" y="245">Entrelinhas é um pequeno</text>
+    <text x="28" y="261">refúgio para essas histórias.</text>
+    <text x="28" y="277">Um acervo feito de encontros,</text>
+    <text x="28" y="293">de curiosidade e do prazer de</text>
+    <text x="28" y="309">ler sem olhar o relógio.</text>
+  </g>
+  <path d="M246 343c10-8 22-8 34 0-12 8-24 8-34 0Z" fill="none" stroke="#9f8767" stroke-opacity=".65"/>
+  <text x="28" y="365" fill="#715843" font-family="Courier New, monospace" font-size="7" letter-spacing="1">FEITO DE PAPEL, PALAVRAS E TEMPO</text>
+  <path d="M0 0 68 0 34 400 0 400Z" fill="url(#crease)" opacity=".32"/>
+</svg>
