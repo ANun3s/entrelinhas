@@ -1092,7 +1092,7 @@ const PaperCrumple = ({
         ref={canvasRef}
         className="paper-crumple-canvas"
         aria-hidden="true"
-        style={{ visibility: status === 'ready' ? 'visible' : 'hidden', filter: shadowFilter }}
+        style={{ filter: shadowFilter }}
       />
       {status !== 'ready' && (
         <img
@@ -1112,16 +1112,15 @@ const PaperCrumple = ({
         type="button"
         className="paper-crumple-hit"
         disabled={disabled || status !== 'ready'}
-        aria-label={`${alt}. Hold to crumple and drag. Keyboard: hold Space or Enter, arrow keys to move, Escape to reset.`}
+        aria-label={`${alt}. Segure para amassar e arrastar. Teclado: segure Espaço ou Enter, use as setas para mover e Escape para restaurar.`}
         aria-pressed="false"
-        style={{ visibility: status === 'ready' ? 'visible' : 'hidden' }}
       />
       <span className="paper-crumple-focus" aria-hidden="true" />
       <span className="paper-crumple-sr" role="status">
         {status === 'loading'
-          ? 'Loading interactive paper.'
+          ? 'Carregando o papel interativo.'
           : status === 'error'
-            ? 'Interactive paper unavailable. Showing the original image.'
+            ? 'Papel interativo indisponível. Exibindo a imagem original.'
             : ''}
       </span>
     </div>

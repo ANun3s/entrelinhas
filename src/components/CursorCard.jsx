@@ -1,35 +1,33 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring } from 'framer-motion';
+import { AnimatePresence, motion, useReducedMotion, useSpring } from 'framer-motion';
 import { publicAsset } from '../publicAsset';
 
 export function CursorCard({ children, image, description, href = '#', title, date, imageCredit, className = '' }) {
   const previewRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
   const springConfig = { damping: 25, stiffness: 300 };
-  const springX = useSpring(x, springConfig);
-  const springY = useSpring(y, springConfig);
+  const springX = useSpring(0, springConfig);
+  const springY = useSpring(0, springConfig);
   const reduceMotion = useReducedMotion();
 
   useEffect(() => { setMounted(true); }, []);
-  const handleMouseMove = (event) => {
+  const handleMouseMove = (event, immediate = false) => {
     const previewWidth = Math.min(280, window.innerWidth - 24);
     const previewHeight = previewRef.current?.offsetHeight || 380;
     const left = Math.min(Math.max(12, event.clientX - previewWidth / 2), window.innerWidth - previewWidth - 12);
     const top = event.clientY + 20 + previewHeight > window.innerHeight ? event.clientY - previewHeight - 16 : event.clientY + 20;
-    x.set(left);
-    y.set(Math.max(12, top));
+    springX[immediate ? "jump" : "set"](left);
+    springY[immediate ? "jump" : "set"](Math.max(12, top));
   };
 
   const handleFocus = (event) => {
     setIsHovered(true);
     const rect = event.currentTarget.getBoundingClientRect();
     const previewWidth = Math.min(280, window.innerWidth - 24);
-    x.set(Math.min(Math.max(12, rect.left), window.innerWidth - previewWidth - 12));
-    y.set(Math.min(Math.max(12, rect.bottom + 12), window.innerHeight - (previewRef.current?.offsetHeight || 380)));
+    springX.jump(Math.min(Math.max(12, rect.left), window.innerWidth - previewWidth - 12));
+    springY.jump(Math.max(12, Math.min(rect.bottom + 12, window.innerHeight - (previewRef.current?.offsetHeight || 380) - 12)));
   };
   const portalTarget = mounted && typeof document !== 'undefined'
     ? document.querySelector('.reader[open]') || document.body
@@ -37,7 +35,7 @@ export function CursorCard({ children, image, description, href = '#', title, da
 
   return <>
     <a href={href} className={`cursor-card-link ${className}`}
-      onMouseEnter={event => { handleMouseMove(event); setIsHovered(true); }} onMouseLeave={() => setIsHovered(false)} onMouseMove={handleMouseMove}
+      onMouseEnter={event => { handleMouseMove(event, true); setIsHovered(true); }} onMouseLeave={() => setIsHovered(false)} onMouseMove={event => handleMouseMove(event)}
       onFocus={handleFocus} onBlur={() => setIsHovered(false)} aria-label={`${title}: ${description}`}
       target="_blank" rel="noreferrer">
       {children}

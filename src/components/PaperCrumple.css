@@ -85,3 +85,6 @@
   white-space: nowrap;
   border: 0;
 }
+
+.paper-crumple:not([data-status='ready']) .paper-crumple-canvas,
+.paper-crumple:not([data-status='ready']) .paper-crumple-hit { visibility: hidden !important; }
