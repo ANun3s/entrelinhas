@@ -15,7 +15,23 @@ function cover({ bg, ink, title, author, year, art }) {
       x.fillStyle = `rgba(33,22,12,${random() * .07})`;
       x.fillRect(random() * w, random() * h, 1 + random() * 2, 1 + random() * 3);
     }
+    // Cloth binding, a recessed spine and fine gilt tooling.
+    const binding = x.createLinearGradient(0, 0, w, 0);
+    binding.addColorStop(0, '#00000070'); binding.addColorStop(.035, '#ffffff18');
+    binding.addColorStop(.065, '#00000038'); binding.addColorStop(.12, '#ffffff08'); binding.addColorStop(1, '#00000018');
+    x.fillStyle = binding; x.fillRect(0, 0, w, h);
+    x.strokeStyle = ink; x.globalAlpha = .1; x.lineWidth = 1;
+    for (let row = 0; row < h; row += 5) { x.beginPath(); x.moveTo(0,row); x.lineTo(w,row); x.stroke(); }
+    x.globalAlpha = 1;
     x.strokeStyle = ink; x.fillStyle = ink; x.textAlign = 'center';
+    x.save(); x.globalAlpha = .65;
+    for (const [cx, cy, rotation] of [[82,82,0],[w-82,82,Math.PI/2],[w-82,h-82,Math.PI],[82,h-82,-Math.PI/2]]) {
+      x.save(); x.translate(cx,cy); x.rotate(rotation); x.lineWidth = 2;
+      x.beginPath(); x.moveTo(0,80); x.lineTo(0,0); x.lineTo(80,0); x.stroke();
+      x.beginPath(); x.moveTo(10,55); x.bezierCurveTo(55,55,55,10,10,10); x.bezierCurveTo(10,55,55,55,55,10); x.stroke();
+      x.restore();
+    }
+    x.restore();
     x.lineWidth = 3; x.strokeRect(47, 47, w - 94, h - 94);
     x.lineWidth = 1; x.strokeRect(59, 59, w - 118, h - 118);
     x.font = '26px Georgia'; x.fillText('E D I Ç Õ E S   E N T R E L I N H A S', w / 2, 115);

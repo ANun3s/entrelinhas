@@ -1,0 +1,352 @@
+{
+  "petropolis": {
+    "image": "/references/petropolis.jpg",
+    "caption": "Petrópolis · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Pal%C3%A1cio_Quitandinha,_Petropolis.jpg",
+    "author": "Wilfredor",
+    "license": "CC0"
+  },
+  "central": {
+    "image": "/references/central.jpg",
+    "caption": "Estrada de Ferro Central do Brasil · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Central_do_Brasil_vista_da_Yup_Star.jpg",
+    "author": "FG fotos",
+    "license": "CC0"
+  },
+  "machado": {
+    "image": "/references/machado.jpg",
+    "caption": "Machado de Assis · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Machado_de_Assis_by_Marc_Ferrez.jpg",
+    "author": "Marc Ferrez / Adam Cuerden",
+    "license": "Public domain"
+  },
+  "engenho-novo": {
+    "image": "/references/engenho-novo.jpg",
+    "caption": "Engenho Novo · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Engenho_Novo.svg",
+    "author": "Nossedotti",
+    "license": "CC BY-SA 3.0"
+  },
+  "moises": {
+    "image": "/references/moises.jpg",
+    "caption": "Moisés · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_079.jpg",
+    "author": "Rembrandt",
+    "license": "Public domain"
+  },
+  "pentateuco": {
+    "image": "/references/pentateuco.jpg",
+    "caption": "Pentateuco · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Torah_(The_S.S._Teacher%27s_Edition-The_Holy_Bible_-_Plate_X).jpg",
+    "author": "Autoria: consultar ficha do acervo",
+    "license": "Public domain"
+  },
+  "hamlet": {
+    "image": "/references/hamlet.jpg",
+    "caption": "Hamlet · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Edwin_Booth_Hamlet_1870.jpg",
+    "author": "J. Gurney &amp; Son, N.Y.",
+    "license": "Public domain"
+  },
+  "africa": {
+    "image": "/references/africa.jpg",
+    "caption": "África · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Africa_(orthographic_projection).svg",
+    "author": "Martin23230",
+    "license": "CC BY-SA 3.0"
+  },
+  "catumby": {
+    "image": "/references/catumby.jpg",
+    "caption": "Catumbi · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Catumbi.JPG",
+    "author": "Junius",
+    "license": "Public domain"
+  },
+  "coimbra": {
+    "image": "/references/coimbra.jpg",
+    "caption": "Coimbra · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Coimbra_e_o_rio_Mondego_(6167200429)_(cropped).jpg",
+    "author": "Leandro Neumann Ciuffo",
+    "license": "CC BY 2.0"
+  },
+  "padua": {
+    "image": "/references/padua.jpg",
+    "caption": "Pádua · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Padua_-_Prato_della_Valle.jpg",
+    "author": "Didier Descouens",
+    "license": "CC BY-SA 4.0"
+  },
+  "brasil": {
+    "image": "/references/brasil.jpg",
+    "caption": "Ouro Preto · imagem de contexto",
+    "source": "https://commons.wikimedia.org/wiki/File:Ouro_Preto,_Brazil,_2011_(cropped).jpg",
+    "author": "Rosino",
+    "license": "CC BY-SA 2.0"
+  },
+  "portugal": {
+    "image": "/references/portugal.jpg",
+    "caption": "Torre de Belém · imagem de contexto",
+    "source": "https://commons.wikimedia.org/wiki/File:Bel%C3%A9m_Tower_in_Lisbon,_Portugal.jpg",
+    "author": "Lisbon Photoshoots",
+    "license": "CC BY-SA 4.0"
+  },
+  "espanhas": {
+    "image": "/references/espanhas.jpg",
+    "caption": "Alhambra · imagem de contexto",
+    "source": "https://commons.wikimedia.org/wiki/File:Alhambradesdegeneralife.jpg",
+    "author": "Reguera; ajustes de níveis por Soerfm",
+    "license": "CC BY-SA 3.0"
+  },
+  "lisboa": {
+    "image": "/references/lisboa.jpg",
+    "caption": "Lisboa · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Lisbon_(36831596786)_(cropped).jpg",
+    "author": "Deensel",
+    "license": "CC BY 2.0"
+  },
+  "itaguai": {
+    "image": "/references/itaguai.jpg",
+    "caption": "Itaguaí · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Itagua%C3%AD.jpg",
+    "author": "Rcandre",
+    "license": "CC BY 3.0"
+  },
+  "coran": {
+    "image": "/references/coran.jpg",
+    "caption": "Alcorão · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Birmingham_Quran_manuscript_full.jpg",
+    "author": "AnonymousUnknown author",
+    "license": "Public domain"
+  },
+  "maome": {
+    "image": "/references/maome.jpg",
+    "caption": "Al-Masjid an-Nabawi · imagem de contexto",
+    "source": "https://commons.wikimedia.org/wiki/File:Masjid_Nabawi_The_Prophet%27s_Mosque,_Madina.jpg",
+    "author": "Muhammad Mahdi Karim",
+    "license": "GFDL 1.2"
+  },
+  "ala": {
+    "image": "/references/ala.jpg",
+    "caption": "Caligrafia árabe · imagem de contexto",
+    "source": "https://commons.wikimedia.org/wiki/File:Tugra_Mahmuds_II.gif",
+    "author": "Baba66",
+    "license": "CC BY-SA 3.0"
+  },
+  "bento": {
+    "image": "/references/bento.jpg",
+    "caption": "Bento VIII · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:B_Benedikt_VIII.jpg",
+    "author": "Autoria: consultar ficha do acervo",
+    "license": "Public domain"
+  },
+  "rio": {
+    "image": "/references/rio.jpg",
+    "caption": "Rio de Janeiro · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Cidade_Maravilhosa.jpg",
+    "author": "Rafael Rabello de Barros",
+    "license": "CC BY-SA 3.0"
+  },
+  "ruanova": {
+    "image": "/references/ruanova.jpg",
+    "caption": "Itaguaí · imagem de contexto",
+    "source": "https://commons.wikimedia.org/wiki/File:Itagua%C3%AD.jpg",
+    "author": "Rcandre",
+    "license": "CC BY 3.0"
+  },
+  "casaverde": {
+    "image": "/references/casaverde.jpg",
+    "caption": "Machado de Assis · imagem de contexto",
+    "source": "https://commons.wikimedia.org/wiki/File:Machado_de_Assis_by_Marc_Ferrez.jpg",
+    "author": "Marc Ferrez / Adam Cuerden",
+    "license": "Public domain"
+  },
+  "bernardo-guimaraes": {
+    "image": "/references/bernardo-guimaraes.jpg",
+    "caption": "Bernardo Guimarães · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Bernardo_Guimar%C3%A3es_(Iconogr%C3%A1fico).jpg",
+    "author": "M. J. Garnier",
+    "license": "Public domain"
+  },
+  "dom-pedro-ii": {
+    "image": "/references/dom-pedro-ii.jpg",
+    "caption": "D. Pedro II · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Pedro_II_of_Brazil_-_Brady-Handy.jpg",
+    "author": "Mathew Benjamin Brady / Levin Corbin Handy",
+    "license": "Public domain"
+  },
+  "campos-goitacases": {
+    "image": "/references/campos-goitacases.jpg",
+    "caption": "Campos dos Goitacazes · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Montagem_de_Campos_dos_Goytacazes-RJ_2.jpeg",
+    "author": "GustavoCosta01",
+    "license": "CC BY-SA 4.0"
+  },
+  "parahyba": {
+    "image": "/references/parahyba.jpg",
+    "caption": "Rio Paraíba do Sul · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Para%C3%ADba_do_Sul_River_in_Cruzeiro_city_S%C3%A3o_Paulo_State.jpg",
+    "author": "Richvianbonett",
+    "license": "CC BY-SA 4.0"
+  },
+  "escravidao": {
+    "image": "/references/escravidao.jpg",
+    "caption": "Escravidão no Brasil · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:A_Brazilian_family_in_Rio_de_Janeiro_by_Jean-Baptiste_Debret_1839.jpg",
+    "author": "Jean-Baptiste Debret",
+    "license": "Public domain"
+  },
+  "guerra-paraguai": {
+    "image": "/references/guerra-paraguai.jpg",
+    "caption": "Guerra do Paraguai · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Pinturas_e_fotos_da_Guerra_do_Paraguai.jpg",
+    "author": "Nathan.rpk",
+    "license": "CC0"
+  },
+  "humaita": {
+    "image": "/references/humaita.jpg",
+    "caption": "Humaitá · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Posi%C3%A7%C3%A3o_da_Fortaleza_de_Humayt%C3%A1.jpg",
+    "author": "A_Patria_Brazileira.djvu: Virgílio Cardoso de Oliveira",
+    "license": "Public domain"
+  },
+  "crimia": {
+    "image": "/references/crimia.jpg",
+    "caption": "Guerra da Crimeia · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Fall_of_Sevastopol.jpg",
+    "author": "Gustave Doré",
+    "license": "Public domain"
+  },
+  "solano-lopez": {
+    "image": "/references/solano-lopez.jpg",
+    "caption": "Francisco Solano López · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Francisco_Solano_Lopez_Carrillo.jpg",
+    "author": "Domenico Parodi",
+    "license": "Public domain"
+  },
+  "cuiaba": {
+    "image": "/references/cuiaba.jpg",
+    "caption": "Cuiabá · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Cuiab%C3%A1_center.jpg",
+    "author": "Arne Müseler",
+    "license": "CC BY-SA 3.0 de"
+  },
+  "uberaba": {
+    "image": "/references/uberaba.jpg",
+    "caption": "Uberaba · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Skyline_de_Uberaba.png",
+    "author": "Pedroepaulo",
+    "license": "CC BY-SA 4.0"
+  },
+  "ouro-preto": {
+    "image": "/references/ouro-preto.jpg",
+    "caption": "Ouro Preto · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Ouro_Preto,_Brazil,_2011_(cropped).jpg",
+    "author": "Rosino",
+    "license": "CC BY-SA 2.0"
+  },
+  "paranaiba": {
+    "image": "/references/paranaiba.jpg",
+    "caption": "Rio Paranaíba · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:MedioParanaiba-AraporaXItumbia-MGxGO.jpg",
+    "author": "Muriloif",
+    "license": "CC BY-SA 4.0"
+  },
+  "maracaju": {
+    "image": "/references/maracaju.jpg",
+    "caption": "Serra de Maracaju · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Serra_de_Maracaju,_Morro_do_Chap%C3%A9u.jpg",
+    "author": "Deise Goes",
+    "license": "CC BY-SA 3.0"
+  },
+  "miranda": {
+    "image": "/references/miranda.jpg",
+    "caption": "Miranda · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:RioMirandaemMatoGrossodoSul.jpg",
+    "author": "David Morimoto (treez44est)",
+    "license": "CC BY-SA 2.0"
+  },
+  "caxias-river": {
+    "image": "/references/caxias-river.jpg",
+    "caption": "Coxim e o Pantanal · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:As_montanhas_da_plan%C3%ADcie.jpg",
+    "author": "Ale Bertassoni",
+    "license": "CC BY-SA 4.0"
+  },
+  "triplice-alianca": {
+    "image": "/references/triplice-alianca.jpg",
+    "caption": "Tríplice Aliança · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Pasaje_del_r%C3%ADo_Santa_Luc%C3%ADa.jpg",
+    "author": "Luis Candido Lopez",
+    "license": "Public domain"
+  },
+  "curupaiti": {
+    "image": "/references/curupaiti.jpg",
+    "caption": "Curupaiti · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:C%C3%A1ndido_Lopez_-_Trinchera_de_Curupayt%C3%AD_-_Google_Art_Project_(497159).jpg",
+    "author": "Luis Candido Lopez",
+    "license": "Public domain"
+  },
+  "sebastopol": {
+    "image": "/references/sebastopol.jpg",
+    "caption": "Sebastopol · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Sevastopol_Collage_2015.png",
+    "author": "Art-top, Dmottl, Alexxx1979, Petar Milošević. Collage edited by AlexTref871",
+    "license": "CC BY-SA 4.0"
+  },
+  "mato-grosso": {
+    "image": "/references/mato-grosso.jpg",
+    "caption": "Mato Grosso · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Bandeira_de_Mato_Grosso.svg",
+    "author": "SVG implementation by E2m",
+    "license": "Public domain"
+  },
+  "sao-paulo": {
+    "image": "/references/sao-paulo.jpg",
+    "caption": "São Paulo · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Marginal_Pinheiros_e_Jockey_Club.jpg",
+    "author": "Agent010",
+    "license": "CC BY-SA 4.0"
+  },
+  "minas-gerais": {
+    "image": "/references/minas-gerais.jpg",
+    "caption": "Minas Gerais · acervo Wikimedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Bandeira_de_Minas_Gerais.svg",
+    "author": "Plovisanta",
+    "license": "Public domain"
+  },
+  "segundo-reinado": {
+    "image": "/references/segundo-reinado.jpg",
+    "caption": "Pedro II do Brasil · imagem de contexto",
+    "source": "https://commons.wikimedia.org/wiki/File:Pedro_II_of_Brazil_-_Brady-Handy.jpg",
+    "author": "Mathew Benjamin Brady / Levin Corbin Handy",
+    "license": "Public domain"
+  },
+  "isaura": {
+    "image": "/references/isaura.jpg",
+    "caption": "Bernardo Guimarães · imagem de contexto",
+    "source": "https://commons.wikimedia.org/wiki/File:Bernardo_Guimar%C3%A3es_(Iconogr%C3%A1fico).jpg",
+    "author": "M. J. Garnier",
+    "license": "Public domain"
+  },
+  "leoncio": {
+    "image": "/references/leoncio.jpg",
+    "caption": "Bernardo Guimarães · imagem de contexto",
+    "source": "https://commons.wikimedia.org/wiki/File:Bernardo_Guimar%C3%A3es_(Iconogr%C3%A1fico).jpg",
+    "author": "M. J. Garnier",
+    "license": "Public domain"
+  },
+  "simao-bacamarte": {
+    "image": "/references/simao-bacamarte.jpg",
+    "caption": "Machado de Assis · imagem de contexto",
+    "source": "https://commons.wikimedia.org/wiki/File:Machado_de_Assis_by_Marc_Ferrez.jpg",
+    "author": "Marc Ferrez / Adam Cuerden",
+    "license": "Public domain"
+  },
+  "ilissos": {
+    "image": "/references/ilissos.jpg",
+    "caption": "Leito do rio Ilisso, Atenas · fotografia de 2020",
+    "source": "https://commons.wikimedia.org/wiki/File:The_dry_riverbed_of_Ilissos_next_to_the_Church_of_Saint_Fotini_on_August_8,_2020.jpg",
+    "author": "George E. Koronaios",
+    "license": "CC0"
+  }
+}

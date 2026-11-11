@@ -1,3 +1,4 @@
+import referenceImages from './reference-images.json';
 // Context cards for proper names, historic figures and places in the chapters.
 export const references = [
   { id: 'machado', labels: ['Machado de Assis'], title: 'Machado de Assis', date: '1839–1908', description: 'Escritor brasileiro. Autor de Dom Casmurro, Memórias Póstumas de Brás Cubas e O Alienista.', image: '/previews/writer.svg', href: 'https://pt.wikipedia.org/wiki/Machado_de_Assis' },
@@ -51,6 +52,14 @@ export const references = [
   { id: 'leoncio', labels: ['Leoncio', 'Leôncio'], title: 'Leôncio', date: 'Personagem de ficção · 1875', description: 'Personagem do romance A escrava Isaura; sua chegada é anunciada no final do primeiro capítulo.', image: '/previews/portrait.svg', href: 'https://pt.wikisource.org/wiki/A_escrava_Isaura' },
   { id: 'simao-bacamarte', labels: ['Simão Bacamarte'], title: 'Simão Bacamarte', date: 'Personagem de ficção · 1882', description: 'Médico protagonista de O Alienista. A vila e a Casa Verde são elementos ficcionais de Machado de Assis.', image: '/previews/portrait.svg', href: 'https://pt.wikisource.org/wiki/O_Alienista' },
 ];
+
+for (const reference of references) {
+  const photo = referenceImages[reference.id];
+  if (photo) {
+    reference.image = photo.image;
+    reference.imageCredit = photo;
+  }
+}
 
 const plain = (text) => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('pt-BR');
 const escapedLabels = references.flatMap((reference) => reference.labels.map((label) => ({ reference, label: plain(label) })))

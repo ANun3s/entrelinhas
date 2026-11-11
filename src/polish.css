@@ -1,0 +1,56 @@
+/* A clothbound library, warm paper and a small salon of paintings. */
+body {
+  background-color: #e9e0cd;
+  background-image: url('./assets/paper-grain.svg'), url('./assets/paper-tears.svg'),
+    radial-gradient(ellipse at 18% 7%, #fff9e7aa, transparent 48%),
+    radial-gradient(ellipse at 97% 36%, #aa82562b, transparent 38%),
+    repeating-linear-gradient(168deg, transparent 0 190px, #80623b08 192px, #fff9ec33 194px, transparent 197px 430px);
+  background-size: 180px 180px, 100% 100%, 100% 100%, 100% 100%, 100% 1100px;
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat, repeat;
+}
+.brand svg { stroke-width: 1.5; filter: drop-shadow(0 1px 0 #fff6); }
+.carousel-sides { position: absolute; inset: 48% 5% auto; z-index: 5; display: flex; justify-content: space-between; pointer-events: none; }
+.carousel-sides .book-carousel-arrow { pointer-events: auto; width: 52px; height: 52px; flex-basis: 52px; color: #543d30; border-color: #795f4755; background: #f2ead8dd; box-shadow: 0 2px 0 #fff8 inset, 0 5px 16px #533a2512; }
+.book-carousel-arrow svg { width: 24px; height: 24px; }
+.carousel-sides .book-carousel-arrow:hover { color: #f5eedc; background: #49352b; transform: translateY(-2px); }
+.carousel-sides.hidden { display: none; }
+.hero-margin { top: 68%; opacity: .6; }
+.book-selectors { padding-inline: 8px; }
+.book-selectors button { opacity: .7; transition: opacity .2s; }
+.book-selectors button:hover { opacity: 1; }
+.mini-cover, .reader-page-cover { position: relative; background: linear-gradient(90deg,#0005,transparent 8%,#fff1 10%,transparent 16%), repeating-linear-gradient(0deg,#ffffff08 0 1px,transparent 1px 4px),var(--cover); border-radius: 1px 3px 3px 1px; }
+.mini-cover::after, .reader-page-cover::after { content:''; position:absolute; inset:7px; border:1px solid color-mix(in srgb,var(--cover-ink),transparent 55%); outline:1px solid color-mix(in srgb,var(--cover-ink),transparent 80%); outline-offset:3px; pointer-events:none; }
+.mini-cover svg, .reader-page-cover svg { opacity:.8; }
+.painting-option { background: transparent; border: 0; padding: 15px 14px 22px; }
+.painting-option.is-active { background: #b89a6c12; }
+.painting-select img { border: 10px solid #61462c; outline: 1px solid #967847; outline-offset: -4px; padding: 4px; background: #c5a367; box-shadow: 0 1px 0 #e2c68c, 0 7px 11px #38271626, 0 20px 30px -15px #38271660; object-fit: contain; }
+.painting-select-label { padding-top: 23px; }
+.painting-select-label strong { font-size: 27px; }
+.painting-option > p { color: #71614f; }
+.dissolve-sticky { top: 7vh; height: 86vh; padding: clamp(9px,1.6vw,22px); border: 6px ridge #9a7846; background: linear-gradient(135deg,#513624,#b1935e 18%,#67482c 30%,#31241c 65%,#a3824e); box-shadow: 0 20px 45px -15px #35241880, inset 0 0 0 3px #d3b276; }
+.dissolve-sticky canvas { border: 2px solid #c8a975; }
+.editorial-section, .editorial-layout, .editorial-paper { overflow: visible; }
+.editorial-paper { position: relative; }
+.editorial-paper::after { content: 'UMA CARTA PARA TOCAR · ARRASTE E SOLTE'; position: absolute; bottom: 25px; left: 0; right: 0; text-align: center; font: 8px var(--mono); letter-spacing: 1.1px; color: #8a7058; pointer-events: none; }
+.cursor-preview { width: min(280px,calc(100vw - 24px)); padding: 8px; background: #f7efdd; border-color:#b89b73; box-shadow: 0 18px 48px #30211438, 0 2px 5px #30211420; }
+.cursor-preview-image { height: 160px; object-fit: cover; object-position: center 30%; filter: sepia(.15) saturate(.8); }
+.cursor-preview-caption { display: block; font: 8px/1.4 var(--mono); color:#806e56; margin-top:6px; }
+.cursor-preview-copy p { font-size:11px; line-height:1.5; }
+.cursor-card-link { border-radius:2px; transition: background .2s; }
+.cursor-card-link:hover, .cursor-card-link:focus-visible { background:#b99a6230; }
+@media(max-width:760px) {
+  .carousel-sides { inset: 46% 2.5% auto; }
+  .carousel-sides .book-carousel-arrow { width:40px; height:40px; flex-basis:40px; }
+  .hero-margin { display:none; }
+  .painting-select img { border-width:6px; padding:3px; }
+  .painting-option { padding-inline:0; }
+  .painting-select-label strong { font-size:20px; }
+  .dissolve-sticky { top:15vh; height:70vh; }
+}
+.line-icon { display:inline-block; width:18px; height:18px; flex-shrink:0; vertical-align:middle; }
+.masthead nav a { display:inline-flex; gap:5px; align-items:center; }
+.masthead nav .line-icon { width:12px; height:12px; opacity:.65; }
+.cursor-preview { max-height:calc(100dvh - 24px); overflow:hidden; }
+.cursor-preview-caption { max-height:36px; overflow:hidden; }
+@media(max-width:760px) { .masthead nav .line-icon { display:none; } }
+.painting-select img { background-color: #e2d4b8; }

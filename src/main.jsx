@@ -5,11 +5,14 @@ import BooksShowcase from './components/BooksShowcase';
 import ArtScrollGallery from './components/ArtScrollGallery';
 import CursorCard from './components/CursorCard';
 import PaperCrumple from './components/PaperCrumple';
+import Icon from './components/Icon';
+import { publicAsset } from './publicAsset';
 import { books } from './books';
 import { linkChapterReferences } from './references';
 import paperLetter from './assets/paper-crumple-letter.svg';
 import './styles.css';
 import './experience.css';
+import './polish.css';
 
 function BookMark({ className = '' }) {
   return <svg className={className} viewBox="0 0 100 80" fill="none" aria-hidden="true"><path d="M50 18C36 9 18 9 6 14v48c15-5 31-4 44 5 13-9 29-10 44-5V14c-12-5-30-5-44 4Zm0 0v49M13 22c10-3 20-1 29 3M13 31c10-3 20-1 29 3M13 40c10-3 20-1 29 3M13 49c10-3 20-1 29 3M58 25c9-4 19-6 29-3M58 34c9-4 19-6 29-3M58 43c9-4 19-6 29-3M58 52c9-4 19-6 29-3" stroke="currentColor" strokeWidth="1.4" /></svg>;
@@ -17,7 +20,7 @@ function BookMark({ className = '' }) {
 
 function LinkedParagraph({ text, index }) {
   return <p className="reading-paragraph" key={index}>{linkChapterReferences(text).map((part, partIndex) => part.reference
-    ? <CursorCard key={`${part.reference.id}-${partIndex}`} image={part.reference.image} title={part.reference.title} date={part.reference.date} description={part.reference.description} href={part.reference.href}>{part.text}</CursorCard>
+    ? <CursorCard key={`${part.reference.id}-${partIndex}`} image={part.reference.image} title={part.reference.title} date={part.reference.date} description={part.reference.description} imageCredit={part.reference.imageCredit} href={part.reference.href}>{part.text}</CursorCard>
     : <React.Fragment key={partIndex}>{part.text}</React.Fragment>)}</p>;
 }
 
@@ -216,7 +219,7 @@ function App() {
     <header className="masthead" id="inicio">
       <a className="brand" href="#inicio" aria-label="Entrelinhas — início"><BookMark /><span>entrelinhas</span></a>
       <p>UM ACERVO PARA O TEMPO DE AGORA.</p>
-      <nav aria-label="Navegação principal"><a href="#acervo">O acervo <span>↗</span></a><a href="#telas">As telas <span>↗</span></a><a href="#sobre">Sobre nós <span>↗</span></a><a href="#colofao">Colofão <span>↗</span></a></nav>
+      <nav aria-label="Navegação principal"><a href="#acervo">O acervo <Icon /></a><a href="#telas">As telas <Icon /></a><a href="#sobre">Sobre nós <Icon /></a><a href="#colofao">Colofão <Icon /></a></nav>
     </header>
     <main>
       <BooksShowcase books={books} heroTitle="Entrelinhas" showNav={false} onRead={openReader} />
@@ -225,7 +228,7 @@ function App() {
         <div className="section-rule"><span>02 / UMA CARTA AO LEITOR</span><span>LEITURA É PRESENÇA.</span></div>
         <div className="editorial-layout">
           <h2 id="about-heading">O tempo passa.<br />As histórias <em>ficam.</em></h2>
-          <div className="editorial-copy"><p>Acreditamos nos livros que ganham orelhas, nas páginas que carregam marcas e nas palavras que encontram a gente na hora certa.</p><p>Entrelinhas é um pequeno refúgio para essas histórias. Um acervo feito de encontros, de curiosidade e do prazer de ler sem olhar o relógio.</p><a href="#acervo" className="text-link">Encontre sua próxima leitura <span>↗</span></a></div>
+          <div className="editorial-copy"><p>Acreditamos nos livros que ganham orelhas, nas páginas que carregam marcas e nas palavras que encontram a gente na hora certa.</p><p>Entrelinhas é um pequeno refúgio para essas histórias. Um acervo feito de encontros, de curiosidade e do prazer de ler sem olhar o relógio.</p><a href="#acervo" className="text-link">Encontre sua próxima leitura <Icon /></a></div>
           <div className="editorial-paper" aria-label="Carta do Entrelinhas impressa em papel interativo">
             <PaperCrumple
               src={paperLetter}
@@ -259,15 +262,15 @@ function App() {
             <button className="mini-cover" style={{ '--cover': book.color, '--cover-ink': book.ink }} aria-label={`Abrir a leitura de ${book.title}`} onClick={() => openReader(book)}><span>{book.author}</span><strong>{book.title}</strong><BookMark /></button>
             <div className="row-title"><p className="eyebrow">{book.category} · VOL. {book.number}</p><h3><button onClick={() => openReader(book)}>{book.title}</button></h3><p>{book.author}</p></div>
             <p className="row-description">{book.desc}</p>
-            <button className="row-read" aria-label={`Abrir a leitura de ${book.title}`} onClick={() => openReader(book)}>Ler livro <span>↗</span></button>
+            <button className="row-read" aria-label={`Abrir a leitura de ${book.title}`} onClick={() => openReader(book)}>Ler livro <Icon /></button>
           </article>)}
           {!filtered.length && <div className="empty-shelf"><BookMark /><p>Sua estante ainda está esperando uma história.</p><button className="text-link" onClick={() => setFilter('Todos')}>Explorar todos os livros ↗</button></div>}
         </div>
         <p className="collection-footnote">Clássicos em domínio público. Transcrições e edições de referência creditadas a cada leitura.</p>
       </section>
-      <section className="closing-note" aria-label="Convite à leitura"><span className="asterisk">✳</span><p>Há um mundo inteiro<br />entre uma página <em>e outra.</em></p><a href="#inicio" className="text-link">Voltar ao começo <span>↑</span></a></section>
+      <section className="closing-note" aria-label="Convite à leitura"><span className="asterisk">✳</span><p>Há um mundo inteiro<br />entre uma página <em>e outra.</em></p><a href="#inicio" className="text-link">Voltar ao começo <Icon name="arrow-up" /></a></section>
     </main>
-    <footer id="colofao"><div className="footer-top"><a href="#inicio" className="brand"><BookMark /><span>entrelinhas</span></a><p>Um espaço independente de leitura.<br />Feito de papel, palavras e tempo.</p><p>EDIÇÃO DIGITAL · VOL. 01<br />BRASIL, 2026</p></div><div className="footer-bottom"><span>© 2026 ENTRELINHAS</span><span>ABRA UM LIVRO. FIQUE UM POUCO.</span><a href="https://vol1.temporaryliveness.org" target="_blank" rel="noreferrer">REFERÊNCIA VISUAL ↗</a></div></footer>
+    <footer id="colofao"><div className="footer-top"><a href="#inicio" className="brand"><BookMark /><span>entrelinhas</span></a><p>Um espaço independente de leitura.<br />Feito de papel, palavras e tempo.</p><p>EDIÇÃO DIGITAL · VOL. 01<br />BRASIL, 2026</p></div><div className="footer-bottom"><span>© 2026 ENTRELINHAS</span><a href={publicAsset("image-credits.html")} target="_blank" rel="noreferrer">CRÉDITOS DAS IMAGENS ↗</a><span>ABRA UM LIVRO. FIQUE UM POUCO.</span><a href="https://vol1.temporaryliveness.org" target="_blank" rel="noreferrer">REFERÊNCIA VISUAL ↗</a></div></footer>
 
   </>;
 }
